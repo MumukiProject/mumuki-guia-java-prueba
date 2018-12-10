@@ -1,4 +1,4 @@
-<button type="button" class="btn">Obtener dirección IP</button>
+<button type="button" class="btn" onclick="getIpAddress()">Obtener dirección IP</button>
 <div class="form-horizontal">
   <div class="form-group">
     <div class="input-group">
@@ -7,7 +7,13 @@
     </div>
   </div>
 </div>
-
-.ip-button {
-
+<script>
+function getIpAddress() {
+  $.get( "http://ip-api.com/json", function( data ) {
+    $( ".result" ).html( data );
+    console.log(data);
+  });
 }
+</script>
+
+
