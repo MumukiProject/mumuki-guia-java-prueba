@@ -1,4 +1,3 @@
-<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
 <button type="button" class="btn" onclick="getIpAddress()">Obtener dirección IP</button>
 <div class="form-horizontal">
   <div class="form-group">
@@ -8,10 +7,11 @@
     </div>
   </div>
 </div>
+
 <script>
 function getIpAddress() {
-  $.get( "http://ip-api.com/json", function( data ) {
-    $( ".result" ).html( data );
+  $.get("http://ip-api.com/json", function(data) {
+    $(".result").html(data);
     console.log(data);
   });
 }
