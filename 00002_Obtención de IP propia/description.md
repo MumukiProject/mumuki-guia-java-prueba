@@ -10,4 +10,4 @@ Para ello, cada nodo tiene un número único dentro de la red llamado **direcci�
 
 > ¡Esperá! :hand: En este momento vos también tenés una conexión a internet, por lo que tenés una dirección IP.
 >
-> Averiguala [acá](http://www.cualesmiip.com/) y escribila en el editor.
+> Averiguala tocando el botón. Luego enviá la solución.

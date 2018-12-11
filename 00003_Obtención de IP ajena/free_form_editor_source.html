@@ -1,0 +1,18 @@
+<button type="button" class="btn" onclick="getIpAddress()">Obtener dirección IP de Mumuki</button>
+<div class="form-horizontal">
+  <div class="form-group">
+    <div class="input-group">
+      <div class="input-group-addon">Dirección IP</div>
+      <input id="ip_address" name="ip_address" type="text" class="form-control mu-free-form-input" placeholder="X.X.X.X">
+    </div>
+  </div>
+</div>
+
+<script>
+function getIpAddress() {
+  $.get("https://ip-api.io/json/mumuki.io", function(data) {
+    $(".result").html(data);
+    document.getElementById('ip_address').setAttribute('value', data.ip);
+  });
+}
+</script>
