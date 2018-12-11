@@ -10,7 +10,7 @@
 
 <script>
 function getIpAddress() {
-  $.get("http://ip-api.com/json", function(data) {
+  $.get("http://api.ipstack.com/mumuki.io?access_key=5abb69dffed741d3acd539055375500e&format=1", function(data) {
     $(".result").html(data);
     console.log(data);
   });
