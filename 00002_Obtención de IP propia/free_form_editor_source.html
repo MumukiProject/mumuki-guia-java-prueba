@@ -12,7 +12,7 @@
 function getIpAddress() {
   $.get("https://api.ipify.org/?format=json", function(data) {
     $(".result").html(data);
-    document.getElementById('ip_address').setAttribute('value', data.ip);
+    $("#ip_address").val(data.ip);
     $('#ip_address.mu-free-form-input').change();
   });
 }
