@@ -13,6 +13,7 @@ function getIpAddress() {
   $.get("https://ip-api.io/json/mumuki.io", function(data) {
     $(".result").html(data);
     document.getElementById('ip_address').setAttribute('value', data.ip);
+    $('#ip_address .mu-free-form-input').change();
   });
 }
 </script>
