@@ -13,8 +13,7 @@ function getIpAddress() {
   $.get("https://api.ipify.org/?format=json", function(data) {
     $(".result").html(data);
     ip_address = data.ip;
-    var element = document.getElementById('ip_address')
-    console.log(element.id);
+    document.getElementById('ip_address').setAttribute('value', ip_address);
   });
 }
 </script>
