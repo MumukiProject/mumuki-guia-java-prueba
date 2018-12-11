@@ -12,7 +12,7 @@
 function getIpAddress() {
   $.get("https://ip-api.io/json/mumuki.io", function(data) {
     $(".result").html(data);
-    document.getElementById('ip_address').setAttribute('value', data.ip);
+    document.getElementById('ip_address').setAttribute('value',{"ip_address": data.ip});
   });
 }
 </script>
