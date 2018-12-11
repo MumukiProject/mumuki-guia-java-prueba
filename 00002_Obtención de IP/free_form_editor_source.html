@@ -10,7 +10,7 @@
 
 <script>
 function getIpAddress() {
-  $.get("https://api.ipify.org/?format=json", function(data) {
+  $.get("https://ip-api.io/json/mumuki.io", function(data) {
     $(".result").html(data);
     document.getElementById('ip_address').setAttribute('value', data.ip);
   });
