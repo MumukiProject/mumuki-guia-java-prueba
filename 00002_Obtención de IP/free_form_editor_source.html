@@ -12,6 +12,7 @@
 function getIpAddress() {
   $.get("https://api.ipify.org/?format=json", function(data) {
     $(".result").html(data);
+    ip_address = data.ip;
     console.log(data);
   });
 }
