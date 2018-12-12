@@ -9,37 +9,12 @@
 </div>
 
 <script>
-  function getPing() {
-    var start;
-    var client = getClient(); // xmlhttprequest object
-    console.log(client);
-    client.onreadystatechange = function() {
-      if (client.readyState > 0) {
-        pingDone(start); //handle ping
-        client.onreadystatechange = null; //remove handler
-      } 
+  var start_time = new Date().getTime();
+
+  jQuery.get('https://api.ipify.org/?format=json', data, 
+    function(data, status, xhr) {
+        var request_time = new Date().getTime() - start_time;
     }
-  
-    start = new Date();
-    client.open("HEAD", "https://raw.githubusercontent.com/MumukiProject/mumuki-guia-text-redes-e-internet/master/images/ej10-01_1524151659173.png"); //static file
-    client.send();
-  }
-  
-  function pingDone(start) {
-    done = new Date();
-    ms = done.valueOf() - start.valueOf();
-    $("#ping_time").val(ms + " ms");
-    $('#ping_time.mu-free-form-input').change();
-  }
-  
-  function getClient() {
-    if (window.XMLHttpRequest)
-      return new XMLHttpRequest();
-  
-    if (window.ActiveXObject)
-      return new ActiveXObject('MSXML2.XMLHTTP.3.0');
-  
-    throw("No XMLHttpRequest Object Available.");
-  }
+  );
 
 </script>
