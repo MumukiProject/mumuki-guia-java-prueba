@@ -9,6 +9,7 @@
 </div>
 
 <script>
+function getPing() {
   var start_time = new Date().getTime();
 
   jQuery.get('https://api.ipify.org/?format=json', data, 
@@ -18,5 +19,5 @@
         $('#ping_time.mu-free-form-input').change();
     }
   );
-
+}
 </script>
