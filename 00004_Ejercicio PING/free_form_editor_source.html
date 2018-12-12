@@ -12,6 +12,7 @@
   function getPing() {
     var start;
     var client = getClient(); // xmlhttprequest object
+    console.log(client);
     client.onreadystatechange = function() {
       if (client.readyState > 0) {
         pingDone(start); //handle ping
