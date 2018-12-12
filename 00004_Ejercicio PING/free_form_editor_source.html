@@ -14,6 +14,8 @@
   jQuery.get('https://api.ipify.org/?format=json', data, 
     function(data, status, xhr) {
         var request_time = new Date().getTime() - start_time;
+        $("#ping_time").val(request_time + " ms");
+        $('#ping_time.mu-free-form-input').change();
     }
   );
 
