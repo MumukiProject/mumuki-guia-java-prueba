@@ -12,12 +12,10 @@
 function getPing() {
   var start_time = new Date().getTime();
 
-  jQuery.get('https://api.ipify.org/?format=json', data, 
-    function(data, status, xhr) {
-        var request_time = new Date().getTime() - start_time;
-        $("#ping_time").val(request_time + " ms");
-        $('#ping_time.mu-free-form-input').change();
-    }
-  );
+  $.get("https://ip-api.io/json/mumuki.io", function(data) {
+    var request_time = new Date().getTime() - start_time;
+    $("#ping_time").val(request_time + " ms");
+    $('#ping_time.mu-free-form-input').change();
+  });
 }
 </script>
