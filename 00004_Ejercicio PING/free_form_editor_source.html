@@ -1,0 +1,44 @@
+<button type="button" class="btn" onclick="getIpAddress()">PING</button>
+<div class="form-horizontal">
+  <div class="form-group">
+    <div class="input-group">
+      <div class="input-group-addon">Dirección IP</div>
+      <input id="ping_time" name="ping_time" type="text" class="form-control mu-free-form-input" placeholder="Milisegundos">
+    </div>
+  </div>
+</div>
+
+<script>
+  function getPing() {
+    var start;
+    var client = getClient(); // xmlhttprequest object
+    client.onreadystatechange = function() {
+      if (client.readyState > 0) {
+        pingDone(start); //handle ping
+        client.onreadystatechange = null; //remove handler
+      } 
+    }
+  
+    start = new Date();
+    client.open("HEAD", "/ping.txt"); //static file
+    client.send();
+  }
+  
+  function pingDone(start) {
+    done = new Date();
+    ms = done.valueOf() - start.valueOf();
+    $("#ping_time").val(ms + " ms");
+    $('#ping_time.mu-free-form-input').change();
+  }
+  
+  function getClient() {
+    if (window.XMLHttpRequest)
+      return new XMLHttpRequest();
+  
+    if (window.ActiveXObject)
+      return new ActiveXObject('MSXML2.XMLHTTP.3.0');
+  
+    throw("No XMLHttpRequest Object Available.");
+  }
+
+</script>
