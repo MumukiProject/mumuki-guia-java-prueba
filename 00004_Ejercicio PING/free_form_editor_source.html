@@ -12,7 +12,7 @@
 function getPing() {
   var start_time = new Date().getTime();
   
-  https://api.ipify.org/?format=json
+  $.get("https://api.ipify.org/?format=json", function(data) {
     $(".result").html(data);
     var request_time = new Date().getTime() - start_time;
     $("#ping_time").val(request_time + " ms");
