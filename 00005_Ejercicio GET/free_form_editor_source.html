@@ -1,0 +1,24 @@
+<button type="button" class="btn" onclick="getHolidays()">Obtener feriados</button>
+  <div class="form-horizontal">
+    <div class="form-group">
+      <label for="holidays">Tocá el botón para ver los feriados</label>
+      <textarea id="holidays" name="holidays" type="text" class="form-control mu-free-form-input"></textarea>
+    </div>
+  
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-addon">Motivos</div>
+        <input id="holiday_reason" name="holiday_reason" type="text" class="form-control mu-free-form-input" placeholder="¿Cuál es el motivo del segundo feriado?">
+      </div>
+    </div>
+  </div>
+
+<script>
+function getHolidays() {
+  $.get("https://nolaborables.com.ar/api/v2/feriados/2019", function(data) {
+    $(".result").html(data);
+    $("#holidays").val(data);
+    $('#holidays.mu-free-form-input').change();
+  });
+}
+</script>
