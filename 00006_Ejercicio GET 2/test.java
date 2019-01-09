@@ -1,4 +1,4 @@
-- name: El motivo del segundo feriado es correcto
+- name: El nombre de la provincia es correcto
   keys:
-    museum: 
-      equal: 'Nombre del museo'
+    province: 
+      equal: 'Mendoza'

@@ -1,24 +1,34 @@
-<button type="button" class="btn btn-info" onclick="getMuseums()">Obtener museos</button>
+<button type="button" class="btn btn-info" onclick="getProvinces()">Obtener provincias</button>
   <div class="form-horizontal">
     <div class="form-group">
-      <label for="museums">Tocá el botón para ver los museos</label>
-      <textarea style="height: 200px;" id="museums" name="museums" type="text" class="read-only-editor form-control mu-free-form-input"></textarea>
+      <textarea style="height: 200px;" id="provinces" name="provinces" type="text" class="read-only-editor form-control mu-free-form-input">Tocá el botón para ver las provincias</textarea>
     </div>
     <div class="form-group">
       <div class="input-group">
-        <div class="input-group-addon">Museo</div>
-        <input id="museum" name="museum" type="text" class="form-control mu-free-form-input" placeholder="¿Cuál es el nombre del museo con id igual a 60?">
+        <div class="input-group-addon">Provincia</div>
+        <input id="province" name="province" type="text" class="form-control mu-free-form-input" placeholder="¿Cuál es el nombre de la provincia con id igual a 50?">
       </div>
     </div>
   </div>
 
+<style>
+ .CodeMirror { height: auto; }
+ .CodeMirror-scroll { max-height: 200px; }
+</style>
+
 <script>
-function getMuseums() {
+mumuki.onInputsReady(() => { 
+  var editor = $('.CodeMirror')[0].CodeMirror;
+  editor.setValue($("#holidays").val());
+  editor.setOption('mode', 'application/json');
+}
+
+function getProvinces() {
   $.get("https://apis.datos.gob.ar/georef/api/provincias", function(data) {
-    console.log(data);
-    var museums = JSON.stringify(data, null, 2);
-    $('.CodeMirror')[0].CodeMirror.setValue(museums);
-    $('#museums.mu-free-form-input').change();
+    var provinces = JSON.stringify(data.provincias, null, 2);
+    $('.CodeMirror')[0].CodeMirror.setValue(provinces);
+    $("#provinces").val(provinces);
+    $('#provinces.mu-free-form-input').change();
   });
 }
 </script>
