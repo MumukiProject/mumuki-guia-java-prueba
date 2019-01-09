@@ -11,10 +11,13 @@
       </div>
     </div>
   </div>
+
 <style>
-.CodeMirror { height: auto; }
-.CodeMirror-scroll { height: 200px; }
+  .CodeMirror { height: auto; border: 1px solid #ddd; }
+  .CodeMirror-scroll { max-height: 200px; }
+  .CodeMirror pre { padding-left: 7px; line-height: 1.25; }
 </style>
+
 <script>
 mumuki.load(() => { $('.CodeMirror')[0].CodeMirror.setValue($("#holidays").val()); })
 function getHolidays() {
