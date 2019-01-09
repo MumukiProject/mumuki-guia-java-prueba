@@ -16,7 +16,7 @@
 function getHolidays() {
   $.get("https://nolaborables.com.ar/api/v2/feriados/2019", function(data) {
     var holidays = JSON.stringify(data, null, 2);
-    mumuki.page.editors[0].setValue(holidays);
+    $('.CodeMirror')[0].CodeMirror.setValue(holidays);
     $('#holidays.mu-free-form-input').change();
   });
 }
