@@ -21,7 +21,7 @@ mumuki.onInputsReady(() => {
   var editor = $('.CodeMirror')[0].CodeMirror;
   editor.setValue($("#holidays").val());
   editor.setOption('mode', 'application/json');
-}
+})
 
 function getProvinces() {
   $.get("https://apis.datos.gob.ar/georef/api/provincias", function(data) {
