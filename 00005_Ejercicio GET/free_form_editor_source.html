@@ -17,7 +17,6 @@
 function getHolidays() {
   $.get("https://nolaborables.com.ar/api/v2/feriados/2019", function(data) {
     console.log(data)
-    $(".result").html(data);
     $("#holidays").val(data);
     $('#holidays.mu-free-form-input').change();
   });
