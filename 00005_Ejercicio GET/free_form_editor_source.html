@@ -17,7 +17,11 @@
 </style>
 
 <script>
-mumuki.onInputsReady(() => { $('.CodeMirror')[0].CodeMirror.setValue($("#holidays").val()); })
+mumuki.onInputsReady(() => { 
+  var editor = $('.CodeMirror')[0].CodeMirror;
+  editor.setValue($("#holidays").val());
+  editor.setOption('mode', 'application/json');
+})
 
 function getHolidays() {
  $.get("https://nolaborables.com.ar/api/v2/feriados/2019", function(data) {
