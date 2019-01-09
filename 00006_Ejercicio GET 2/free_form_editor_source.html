@@ -24,8 +24,8 @@ mumuki.onInputsReady(() => {
 })
 
 function getProvinces() {
- $.get("https://nolaborables.com.ar/api/v2/feriados/2019", function(data) {
-   var provinces = JSON.stringify(data, null, 2);
+ $.get("https://apis.datos.gob.ar/georef/api/provincias", function(data) {
+   var provinces = JSON.stringify(data.provincias, null, 2);
    $('.CodeMirror')[0].CodeMirror.setValue(provinces);
    $("#provinces").val(provinces);
    $('#provinces.mu-free-form-input').change();
