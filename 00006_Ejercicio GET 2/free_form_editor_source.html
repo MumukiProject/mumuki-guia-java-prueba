@@ -1,0 +1,24 @@
+<button type="button" class="btn btn-info" onclick="getMuseums()">Obtener museos</button>
+  <div class="form-horizontal">
+    <div class="form-group">
+      <label for="museums">Tocá el botón para ver los museos</label>
+      <textarea style="height: 200px;" id="museums" name="museums" type="text" class="read-only-editor form-control mu-free-form-input"></textarea>
+    </div>
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-addon">Museo</div>
+        <input id="museum" name="museum" type="text" class="form-control mu-free-form-input" placeholder="¿Cuál es el nombre del museo con id igual a 60?">
+      </div>
+    </div>
+  </div>
+
+<script>
+function getMuseums() {
+  $.get("https://www.cultura.gob.ar/api/v2.0/museos/?format=json", function(data) {
+    console.log(data);
+    var museums = JSON.stringify(data, null, 2);
+    $('.CodeMirror')[0].CodeMirror.setValue(museums);
+    $('#museums.mu-free-form-input').change();
+  });
+}
+</script>
