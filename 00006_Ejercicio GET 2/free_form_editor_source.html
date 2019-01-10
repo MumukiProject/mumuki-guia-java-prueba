@@ -17,9 +17,16 @@
 </style>
 
 <script>
-mumuki.onInputsReady(() => { 
+mumuki.onInputsReady('.CodeMirror', () => {
   var editor = $('.CodeMirror')[0].CodeMirror;
-  editor.setValue($("#provinces").val());
+  let json = $('#solution_content').val();
+  
+  if(json){
+    let values = JSON.parse(json);
+  
+    editor.setValue(values.provinces);
+  }
+  
   editor.setOption('mode', 'application/json');
 })
 
