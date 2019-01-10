@@ -1,7 +1,7 @@
 <button type="button" class="btn btn-info" onclick="getHolidays()">Obtener feriados</button>
  <div class="form-horizontal">
    <div class="form-group">
-     <textarea style="height: 200px;" id="holidays" name="holidays" type="text" class="editor form-control mu-free-form-input">Tocá el botón para ver los feriados</textarea>
+     <textarea style="height: 200px;" id="holidays" name="holidays" type="text" class="read-only-editor form-control mu-free-form-input">Tocá el botón para ver los feriados</textarea>
    </div>
    <div class="form-group">
      <div class="input-group">
@@ -17,7 +17,11 @@
 </style>
 
 <script>
-
+mumuki.onInputsReady(() => {
+  var editor = $('.CodeMirror')[0].CodeMirror;
+  editor.setValue($("#holidays").val());
+  editor.setOption('mode', 'application/json');
+})
 
 function getHolidays() {
  $.get("https://nolaborables.com.ar/api/v2/feriados/2019", function(data) {
