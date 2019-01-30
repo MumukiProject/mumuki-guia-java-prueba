@@ -1,9 +1,9 @@
+<div class="btn-group" role="group" aria-label="Emojis">
+  <button type="button" class="btn btn-secondary" onclick="writeEmoji('a')">Hola</button>
+  <button type="button" class="btn btn-secondary" onclick="writeEmoji(💜)">💜</button>
+  <button type="button" class="btn btn-secondary" onclick="writeEmoji(🔥)">🔥</button>
+</div>
 <div class="form-horizontal">
-  <div class="btn-group" role="group" aria-label="Emojis">
-    <button type="button" class="btn btn-secondary" onclick="writeEmoji('a')">Hola</button>
-    <button type="button" class="btn btn-secondary" onclick="writeEmoji(💜)">💜</button>
-    <button type="button" class="btn btn-secondary" onclick="writeEmoji(🔥)">🔥</button>
-  </div>
   <div class="form-group">
     <div class="input-group">
       <div class="input-group-addon">Mensaje encriptado</div>
@@ -14,7 +14,7 @@
 
 
 <script>
-function writeEmoji(emoji) {
+function (emoji) {
   $("#emojis_message").val("hola");
   $('#emojis_message.mu-free-form-input').change();
 }
