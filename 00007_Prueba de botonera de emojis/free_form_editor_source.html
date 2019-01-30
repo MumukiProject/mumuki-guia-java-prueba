@@ -27,8 +27,9 @@ function writeEmoji(emoji) {
 }
 
 function restoreCursorPosition() {
-  $('#emojis_message').prop('selectionStart', emojiCursorStart);
-  $('#emojis_message').prop('selectionEnd', emojiCursorEnd)
+  var emojisInput = $('#emojis_message');
+  emojisInput.prop('selectionStart', emojiCursorStart);
+  emojisInput.prop('selectionEnd', emojiCursorEnd)
 }
 </script>
 
