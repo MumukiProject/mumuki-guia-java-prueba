@@ -16,11 +16,11 @@
 <script>
 function writeEmoji(emoji) {
   var emojisInput = $('#emojis_message');
-  var cursorPosStart = emojisInput.prop('selectionStart');
-  var cursorPosEnd = emojisInput.prop('selectionEnd');
+  var cursorPosStart = emojisInput.prop('selectionStart')/2;
+  var cursorPosEnd = emojisInput.prop('selectionEnd')/2;
   var v = emojisInput.val() || '';
-  var textAfter = v.substring(0,  cursorPosStart);
-  var textBefore = v.substring(cursorPosEnd, v.length);
+  var textBefore = v.substring(0,  cursorPosStart);
+  var textAfter  = v.substring(cursorPosEnd, v.length);
   emojisInput.val(textBefore + emoji + textAfter);
   $('#emojis_message.mu-free-form-input').change();
 }
