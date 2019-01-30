@@ -26,10 +26,11 @@ function writeEmoji(emoji) {
   $('#emojis_message.mu-free-form-input').change();
 }
 
-function restoreCursorPosition() {
+function restoreCursorPosition(event) {
   var emojisInput = $('#emojis_message');
   emojisInput.prop('selectionStart', emojiCursorStart);
-  emojisInput.prop('selectionEnd', emojiCursorEnd)
+  emojisInput.prop('selectionEnd', emojiCursorEnd);
+  event.stopPropagation();
 }
 </script>
 
