@@ -22,9 +22,11 @@ function writeEmoji(emoji) {
   var textBefore = v.substring(0,  cursorPosStart);
   var textAfter  = v.substring(cursorPosEnd, v.length);
   emojisInput.val(textBefore + emoji + textAfter);
+  $('#emojis_message.mu-free-form-input').change();
   emojisInput.prop('selectionStart', cursorPosStart + 2);
   emojisInput.prop('selectionEnd', cursorPosStart + 2);
-  $('#emojis_message.mu-free-form-input').change();
+  console.log(cursorPosStart);
+  emojisInput.prop('selectionStart')
 }
 </script>
 
