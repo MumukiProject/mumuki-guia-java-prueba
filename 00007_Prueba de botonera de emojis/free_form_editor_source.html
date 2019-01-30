@@ -14,27 +14,16 @@
 
 
 <script>
-var emojiCursorStart, emojiCursorEnd;
 function writeEmoji(emoji) {
-  var emojisInput = $('#emojis_message');
-  emojiCursorStart = emojisInput.prop('selectionStart');
+  let emojisInput = $('#emojis_message');
+  let emojiCursorStart = emojisInput.prop('selectionStart');
   emojiCursorEnd = emojisInput.prop('selectionEnd');
-  var v = emojisInput.val() || '';
-  var textBefore = v.substring(0,  emojiCursorStart);
-  var textAfter  = v.substring(emojiCursorEnd, v.length);
+  let v = emojisInput.val() || '';
+  let textBefore = v.substring(0,  emojiCursorStart);
+  let textAfter  = v.substring(emojiCursorEnd, v.length);
   emojisInput.val(textBefore + emoji + textAfter);
   $('#emojis_message.mu-free-form-input').change();
 }
-
-function restoreCursorPosition(event) {
-  var emojisInput = $('#emojis_message');
-  emojisInput.prop('selectionStart', emojiCursorStart - 2);
-  emojisInput.prop('selectionEnd', emojiCursorStart - 2);
-  event.stopPropagation();
-  event.preventDefault();
-}
-
-$('#emojis_message').blur((e) => restoreCursorPosition(e));
 
 </script>
 
