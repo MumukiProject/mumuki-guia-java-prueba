@@ -17,7 +17,7 @@
 function writeEmoji(emoji) {
   var emojisInput = $('#emojis_message');
   var cursorPosStart = emojisInput.prop('selectionStart');
-  var cursorPosEnd = emojisInput.prop('selectionEnd') || emojisInput.val().length;
+  var cursorPosEnd = emojisInput.prop('selectionEnd');
   var v = emojisInput.val() || '';
   var textBefore = v.substring(0,  cursorPosStart);
   var textAfter  = v.substring(cursorPosEnd, v.length);
