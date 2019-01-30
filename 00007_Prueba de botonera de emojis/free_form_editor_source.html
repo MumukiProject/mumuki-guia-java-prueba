@@ -7,14 +7,14 @@
   <div class="form-group">
     <div class="input-group">
       <div class="input-group-addon">Mensaje encriptado</div>
-      <input name="emojis_message" type="text" class="form-control mu-free-form-input mu-paste-target" placeholder="Emojis">
+      <input name="emojis_message" type="text" class="form-control mu-free-form-input" placeholder="Emojis">
     </div>
   </div>
 </div>
 
 
 <script>
-function (emoji) {
+function writeEmoji(emoji) {
   $("#emojis_message").val("hola");
   $('#emojis_message.mu-free-form-input').change();
 }
