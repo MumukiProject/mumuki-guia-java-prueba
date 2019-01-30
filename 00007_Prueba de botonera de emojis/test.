@@ -1,0 +1,4 @@
+- name: El mensaje es correcto
+  keys:
+    emojis_message: 
+      equal: 🎹🔥💜
