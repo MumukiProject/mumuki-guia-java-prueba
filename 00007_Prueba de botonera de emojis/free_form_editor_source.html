@@ -21,7 +21,7 @@ function writeEmoji(emoji) {
   var v = emojisInput.val() || '';
   var textBefore = v.substring(0,  cursorPosStart);
   var textAfter  = v.substring(cursorPosEnd, v.length);
-  emojisInput.val(textBefore + emoji + textAfter);
+  $('#emojis-message').val(textBefore + emoji + textAfter);
   $('#emojis_message.mu-free-form-input').change();
 }
 </script>
