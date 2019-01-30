@@ -23,7 +23,7 @@ function writeEmoji(emoji) {
   var textAfter  = v.substring(cursorPosEnd, v.length);
   emojisInput.val(textBefore + emoji + textAfter);
   $('#emojis_message.mu-free-form-input').change();
-  emojisInput.setSelectionRange(cursorPosStart, cursorPosEnd);
+  emojisInput[0].setSelectionRange(cursorPosStart, cursorPosEnd);
 }
 </script>
 
