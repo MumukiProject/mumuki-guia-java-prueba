@@ -7,7 +7,7 @@
   <div class="form-group">
     <div class="input-group">
       <div class="input-group-addon">Mensaje encriptado</div>
-      <input id="emojis_message" name="emojis_message" type="text" class="form-control mu-free-form-input" onfocus="this.value = this.value;" placeholder="Emojis">
+      <input id="emojis_message" name="emojis_message" type="text" class="form-control mu-free-form-input" onfocus="this.value = this.value;" placeholder="Emojis" onblur="restoreCursorPosition()">
     </div>
   </div>
 </div>
@@ -24,6 +24,11 @@ function writeEmoji(emoji) {
   var textAfter  = v.substring(emojiCursorEnd, v.length);
   emojisInput.val(textBefore + emoji + textAfter);
   $('#emojis_message.mu-free-form-input').change();
+}
+
+function restoreCursorPosition() {
+  emojisInput.prop('selectionStart', emojiCursorStart);
+  emojisInput.prop('selectionEnd', emojiCursorEnd)
 }
 </script>
 
