@@ -1,8 +1,8 @@
 <div class="form-horizontal">
   <div class="btn-group" role="group" aria-label="Emojis">
-    <button type="button" class="btn btn-secondary mu-clipboard">🎹</button>
-    <button type="button" class="btn btn-secondary mu-clipboard">💜</button>
-    <button type="button" class="btn btn-secondary mu-clipboard">🔥</button>
+    <button type="button" class="btn btn-secondary mu-clipboard" onclick="writeEmoji(🎹)">🎹</button>
+    <button type="button" class="btn btn-secondary mu-clipboard" onclick="writeEmoji(💜)">💜</button>
+    <button type="button" class="btn btn-secondary mu-clipboard" onclick="writeEmoji(🔥)">🔥</button>
   </div>
   <div class="form-group">
     <div class="input-group">
@@ -11,3 +11,11 @@
     </div>
   </div>
 </div>
+
+
+<script>
+function writeEmoji(emoji) {
+  $("#emojis_message").val(request_time + emoji);
+  $('#emojis_message.mu-free-form-input').change();
+}
+</script>
