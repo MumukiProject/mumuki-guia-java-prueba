@@ -14,13 +14,14 @@
 
 
 <script>
+let emojiCursorStart, emojiCursorEnd;
 function writeEmoji(emoji) {
   var emojisInput = $('#emojis_message');
-  var cursorPosStart = emojisInput.prop('selectionStart');
-  var cursorPosEnd = emojisInput.prop('selectionEnd');
+  emojiCursorStart = emojisInput.prop('selectionStart');
+  emojiCursorEnd = emojisInput.prop('selectionEnd');
   var v = emojisInput.val() || '';
-  var textBefore = v.substring(0,  cursorPosStart);
-  var textAfter  = v.substring(cursorPosEnd, v.length);
+  var textBefore = v.substring(0,  emojiCursorStart);
+  var textAfter  = v.substring(emojiCursorEnd, v.length);
   emojisInput.val(textBefore + emoji + textAfter);
   $('#emojis_message.mu-free-form-input').change();
 }
