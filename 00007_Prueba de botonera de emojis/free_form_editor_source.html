@@ -17,16 +17,12 @@
 function writeEmoji(emoji) {
   var emojisInput = $('#emojis_message');
   var cursorPosStart = emojisInput.prop('selectionStart');
-  var cursorPosEnd = emojisInput.prop('selectionEnd');
+  var cursorPosEnd = emojisInput.prop('selectionEnd') || emojisInput.val().length;
   var v = emojisInput.val() || '';
   var textBefore = v.substring(0,  cursorPosStart);
   var textAfter  = v.substring(cursorPosEnd, v.length);
   emojisInput.val(textBefore + emoji + textAfter);
   $('#emojis_message.mu-free-form-input').change();
-  emojisInput.prop('selectionStart', cursorPosStart + 2);
-  emojisInput.prop('selectionEnd', cursorPosStart + 2);
-  console.log(cursorPosStart);
-  console.log(emojisInput.prop('selectionStart'));
 }
 </script>
 
