@@ -1,4 +1,4 @@
-<button type="button" class="btn btn-secondary" onclick="writeEmoji('a')">Hola</button>
+<button type="button" class="btn btn-secondary" onclick="writeEmoji()">Hola</button>
 <div class="btn-group" role="group" aria-label="Emojis">
   
   <button type="button" class="btn btn-secondary" onclick="writeEmoji(💜)">💜</button>
@@ -15,7 +15,7 @@
 
 
 <script>
-function writeEmoji(emoji) {
+function writeEmoji() {
   $("#emojis_message").val("hola");
   $('#emojis_message.mu-free-form-input').change();
 }
