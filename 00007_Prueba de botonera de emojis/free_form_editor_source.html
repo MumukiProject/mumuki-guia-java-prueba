@@ -28,7 +28,6 @@
     let textBefore = value.substring(0,  emojiCursorStart);
     let textAfter  = value.substring(emojiCursorEnd, v.length);
     emojisInput.val(textBefore + emoji + textAfter);
-    emojisInput.setSelectionRange(emojiCursorStart + 1, emojiCursorStart + 1);
     $('#emojis_message.mu-free-form-input').change();
   }
   
