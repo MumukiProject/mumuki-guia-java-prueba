@@ -21,25 +21,25 @@
 
 <script>
 
-let start = null;
-
-function writeEmoji(emoji) {
-  let emojisInput = $('#emojis_message');
-  let emojiCursorStart = start || emojisInput.prop('selectionStart');
-  let emojiCursorEnd = emojisInput.prop('selectionEnd');
-  let v = emojisInput.val() || '';
-  let textBefore = v.substring(0,  emojiCursorStart);
-  let textAfter  = v.substring(emojiCursorEnd, v.length);
-  emojisInput.val(textBefore + emoji + textAfter);
-  $('#emojis_message.mu-free-form-input').change();
-  emojisInput.focus();
-  emojiCursorStart ++;
-  emojisInput.setSelectionRange(start + 1, start + 1);
-}
-
-function onFocus() {
-  start = $('#emojis_message').prop('selectionStart');
-}
-
+  let start = null;
+  
+  function writeEmoji(emoji) {
+    let emojisInput = $('#emojis_message');
+    let emojiCursorStart = start || emojisInput.prop('selectionStart');
+    let emojiCursorEnd = emojisInput.prop('selectionEnd');
+    let v = emojisInput.val() || '';
+    let textBefore = v.substring(0,  emojiCursorStart);
+    let textAfter  = v.substring(emojiCursorEnd, v.length);
+    emojisInput.val(textBefore + emoji + textAfter);
+    $('#emojis_message.mu-free-form-input').change();
+    emojisInput.focus();
+    emojiCursorStart ++;
+    emojisInput.setSelectionRange(start + 1, start + 1);
+  }
+  
+  function onFocus() {
+    start = $('#emojis_message').prop('selectionStart');
+  }
+  
 </script>
 
