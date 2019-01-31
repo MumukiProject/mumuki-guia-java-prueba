@@ -37,8 +37,8 @@
 
   function onChange() {
     const input = $('#emojis_message');
-    input[0].setSelectionRange(start);
     input.focus();
+    input[0].setSelectionRange(start, start);
   }
   
 </script>
