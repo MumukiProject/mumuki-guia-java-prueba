@@ -12,6 +12,7 @@
         name="emojis_message"
         type="text" 
         class="form-control mu-free-form-input" 
+        onchange="onChange()"
         placeholder="Emojis">
     </div>
   </div>
@@ -20,15 +21,24 @@
 
 <script>
 
+  let start;
+  
   function writeEmoji(emoji) {
-    let emojisInput = $('#emojis_message');
-    let emojiCursorStart = emojisInput.prop('selectionStart');
-    let emojiCursorEnd = emojisInput.prop('selectionEnd');
-    let value = emojisInput.val() || '';
-    let textBefore = value.substring(0,  emojiCursorStart);
-    let textAfter  = value.substring(emojiCursorEnd, value.length);
+    const emojisInput = $('#emojis_message');
+    const emojiCursorStart = emojisInput.prop('selectionStart');
+    const emojiCursorEnd = emojisInput.prop('selectionEnd');
+    const value = emojisInput.val() || '';
+    const textBefore = value.substring(0,  emojiCursorStart);
+    const textAfter  = value.substring(emojiCursorEnd, value.length);
     emojisInput.val(textBefore + emoji + textAfter);
+    start = emojiCursorStart;
     $('#emojis_message.mu-free-form-input').change();
+  }
+
+  function onChange() {
+    const input = $('#emojis_message');
+    input.focus();
+    input.setCursorPosition(start);
   }
   
 </script>
