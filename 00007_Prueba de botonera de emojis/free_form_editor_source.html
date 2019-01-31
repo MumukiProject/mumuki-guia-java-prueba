@@ -10,8 +10,8 @@
       <input 
         id="emojis_message" 
         name="emojis_message"
-        type="text"
-        class="form-control mu-free-form-input"
+        type="text" 
+        class="form-control mu-free-form-input" 
         placeholder="Emojis">
     </div>
   </div>
@@ -19,13 +19,10 @@
 
 
 <script>
-
-let start = null
-
 function writeEmoji(emoji) {
   let emojisInput = $('#emojis_message');
   let emojiCursorStart = emojisInput.prop('selectionStart');
-  emojiCursorEnd = emojisInput.prop('selectionEnd');
+  let emojiCursorEnd = emojisInput.prop('selectionEnd');
   let v = emojisInput.val() || '';
   let textBefore = v.substring(0,  emojiCursorStart);
   let textAfter  = v.substring(emojiCursorEnd, v.length);
