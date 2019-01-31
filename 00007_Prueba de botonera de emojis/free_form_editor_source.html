@@ -31,7 +31,7 @@
     const textBefore = value.substring(0,  emojiCursorStart);
     const textAfter  = value.substring(emojiCursorEnd, value.length);
     emojisInput.val(textBefore + emoji + textAfter);
-    start = emojiCursorStart;
+    start = emojiCursorStart + 1;
     $('#emojis_message.mu-free-form-input').change();
   }
 
