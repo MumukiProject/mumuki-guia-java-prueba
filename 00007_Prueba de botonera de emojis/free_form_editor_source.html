@@ -26,7 +26,7 @@
     let emojiCursorEnd = emojisInput.prop('selectionEnd');
     let value = emojisInput.val() || '';
     let textBefore = value.substring(0,  emojiCursorStart);
-    let textAfter  = value.substring(emojiCursorEnd, v.length);
+    let textAfter  = value.substring(emojiCursorEnd, value.length);
     emojisInput.val(textBefore + emoji + textAfter);
     $('#emojis_message.mu-free-form-input').change();
   }
