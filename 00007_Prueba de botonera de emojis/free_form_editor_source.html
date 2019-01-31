@@ -12,7 +12,6 @@
         name="emojis_message"
         type="text"
         class="form-control mu-free-form-input"
-        onfocus="this.value = this.value;"
         placeholder="Emojis">
     </div>
   </div>
@@ -20,6 +19,9 @@
 
 
 <script>
+
+let start = null
+
 function writeEmoji(emoji) {
   let emojisInput = $('#emojis_message');
   let emojiCursorStart = emojisInput.prop('selectionStart');
