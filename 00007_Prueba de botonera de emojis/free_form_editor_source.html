@@ -31,14 +31,14 @@
     const textBefore = value.substring(0,  emojiCursorStart);
     const textAfter  = value.substring(emojiCursorEnd, value.length);
     emojisInput.val(textBefore + emoji + textAfter);
-    start = emojiCursorStart + 1;
+    start = emojiCursorStart;
     $('#emojis_message.mu-free-form-input').change();
   }
 
   function onChange() {
     const input = $('#emojis_message');
     input.focus();
-    input[0].setSelectionRange(start, start);
+    input[0].setSelectionRange(start + 1, start + 1);
   }
   
 </script>
