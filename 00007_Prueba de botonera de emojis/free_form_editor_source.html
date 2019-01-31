@@ -32,7 +32,7 @@
     const textBefore = value.substring(0,  emojiCursorStart);
     const textAfter  = value.substring(emojiCursorEnd, value.length);
     emojisInput.val(textBefore + emoji + textAfter);
-    start = emojiCursorStart + 2;
+    start = emojiCursorStart + emoji.length;
     $('#emojis_message.mu-free-form-input').change();
   }
 
