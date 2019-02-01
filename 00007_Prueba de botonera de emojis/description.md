@@ -1,4 +1,4 @@
-<table style="width:100%">
+<table class="table table-bordered">
   <tr>
     <th>A = ❤</th>
     <th>B = 💣</th> 
