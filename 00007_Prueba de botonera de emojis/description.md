@@ -11,26 +11,26 @@
     <th>I = 👉</th>
   </tr>
   <tr>
-    <td>J = ❤</td>
-    <td>K = ❤</td> 
-    <td>L = ❤</td>
-    <th>M = 🌵</th>
-    <th>N = 🌵</th>
-    <th>Ñ = 🌵</th>
-    <th>O = 🌵</th>
-    <th>P = 🌵</th>
-    <th>Q = 🌵</th>
+    <td>J = 🎮</td>
+    <td>K = 👌</td> 
+    <td>L = 🔎</td>
+    <th>M = 🎵</th>
+    <th>N = 🐷</th>
+    <th>Ñ = 🌈</th>
+    <th>O = 👁️</th>
+    <th>P = ⚽</th>
+    <th>Q = ❓</th>
   </tr>
   <tr>
-    <td>R = ❤</td>
-    <td>S = ❤</td> 
-    <td>T = ❤</td>
-    <th>U = 🌵</th>
-    <th>V = 🌵</th>
-    <th>W = 🌵</th>
-    <th>X = 🌵</th>
-    <th>Y = 🌵</th>
-    <th>Z = 🌵</th>
+    <td>R = 🤖</td>
+    <td>S = 🍉</td> 
+    <td>T = 🎹</td>
+    <th>U = 💡</th>
+    <th>V = ✈️</th>
+    <th>W = 🌎</th>
+    <th>X = 👽</th>
+    <th>Y = ⚠️</th>
+    <th>Z = 🍎</th>
   </tr>
 </table>
 
