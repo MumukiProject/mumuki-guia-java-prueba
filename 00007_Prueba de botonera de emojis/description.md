@@ -1,6 +1,6 @@
 <table class="table table-bordered">
   <tr>
-    <th>A = ❤️️️</th>
+    <th>A = 💜️️️</th>
     <th>B = 💣</th> 
     <th>C = 🌵</th>
     <th>C = 🌵</th>
