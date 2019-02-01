@@ -1,8 +1,8 @@
 <div class="btn-group" role="group" aria-label="Emojis">
-  <button type="button" class="btn btn-secondary with-border" onclick="writeEmoji('🎹')">🎹</button>
-  <button type="button" class="btn btn-secondary with-border" onclick="writeEmoji('💜')">💜</button>
-  <button type="button" class="btn btn-secondary with-border" onclick="writeEmoji('🔥')">🔥</button>
-  <button type="button" class="btn btn-secondary with-border" onclick="writeEmoji('😀')">😀</button>
+  <button type="button" class="btn btn-secondary emoji-button" onclick="writeEmoji('🎹')">🎹</button>
+  <button type="button" class="btn btn-secondary emoji-border" onclick="writeEmoji('💜')">💜</button>
+  <button type="button" class="btn btn-secondary emoji-border" onclick="writeEmoji('🔥')">🔥</button>
+  <button type="button" class="btn btn-secondary emoji-border" onclick="writeEmoji('😀')">😀</button>
 </div>
 <div class="form-horizontal">
   <div class="form-group">
@@ -43,17 +43,13 @@
 </script>
 
 <style>
-  .with-border {
+  .emoji-border {
     background-color: #ecf0f1;
     border: 1px solid #dce4ec;
     border-radius: 4px;
   }
   
-  .with-border:focus {
-    outline-color: #0B456D;
-  }
-  
-  .with-border:active {
+  .emoji-border:focus {
     outline-color: #0B456D;
   }
 </style>
