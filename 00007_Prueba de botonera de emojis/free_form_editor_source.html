@@ -1,8 +1,8 @@
 <div class="btn-group" role="group" aria-label="Emojis">
-  <button type="button" class="btn btn-secondary" onclick="writeEmoji('🎹')">🎹</button>
-  <button type="button" class="btn btn-secondary" onclick="writeEmoji('💜')">💜</button>
-  <button type="button" class="btn btn-secondary" onclick="writeEmoji('🔥')">🔥</button>
-  <button type="button" class="btn btn-secondary" onclick="writeEmoji('😀')">😀</button>
+  <button type="button" class="btn btn-secondary with-border" onclick="writeEmoji('🎹')">🎹</button>
+  <button type="button" class="btn btn-secondary with-border" onclick="writeEmoji('💜')">💜</button>
+  <button type="button" class="btn btn-secondary with-border" onclick="writeEmoji('🔥')">🔥</button>
+  <button type="button" class="btn btn-secondary with-border" onclick="writeEmoji('😀')">😀</button>
 </div>
 <div class="form-horizontal">
   <div class="form-group">
@@ -21,7 +21,6 @@
 
 
 <script>
-
   let start;
   
   function writeEmoji(emoji) {
@@ -41,6 +40,10 @@
     input[0].setSelectionRange(start, start);
     input.focus();
   }
-  
 </script>
 
+<style>
+  .with-border {
+    border: 1px solid darkgray;
+  }
+</style>
