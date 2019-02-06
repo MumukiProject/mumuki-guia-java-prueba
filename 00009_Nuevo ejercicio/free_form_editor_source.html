@@ -1,0 +1,56 @@
+<div class="container">
+  <div class="imgblock">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/Cellular-virus-wallpaper.jpg" onclick="selectImage('1ra imagen')">
+  </div>
+  <div class="imgblock">
+    <img src="https://raw.githubusercontent.com/MumukiProject/mumuki-guia-java-prueba/master/assets/Screenshot%20from%202019-02-06%2017-10-28_1549483858958.png" onclick="selectImage('2da imagen')">
+  </div>
+  <div class="imgblock">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Virus_en_1985.jpg" onclick="selectImage('3ra imagen')">
+  </div>
+</div>
+
+<div class="form-horizontal">
+  <div class="form-group">
+    <div class="input-group">
+      <div class="input-group-addon">Imagen con malware</div>
+      <input 
+        id="malware_image" 
+        name="malware_image"
+        type="text" 
+        class="form-control mu-free-form-input" 
+      >
+    </div>
+  </div>
+</div>
+
+
+<script>
+  let start;
+  
+  function selectImage(image) {
+    $("#malware_image").val(image);
+    $('#malware_image.mu-free-form-input').change();
+  }
+</script>
+
+<style>
+  .container {
+    display: block;
+    width: 100%;
+  }
+  .imgblock {
+    float: left;
+    width: 32%;
+    margin: 8px;
+    box-sizing: border-box;
+    vertical-align: middle;
+  }
+  .imgblock img {
+      margin: 5px;
+      width: 100%; 
+      height: auto;
+      vertical-align: middle;
+      cursor: pointer;
+  }
+</style>
