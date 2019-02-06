@@ -1,31 +1,37 @@
 <div class="container">
   <div class="row-flex">
       <div class="imgblock">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/Cellular-virus-wallpaper.jpg"/>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/Cellular-virus-wallpaper.jpg" onclick="selectImage('1ra imagen')"/>
       </div>
       <div class="imgblock">
-        <img src="https://raw.githubusercontent.com/MumukiProject/mumuki-guia-java-prueba/master/assets/Screenshot%20from%202019-02-06%2017-10-28_1549483858958.png"/>
+        <img src="https://raw.githubusercontent.com/MumukiProject/mumuki-guia-java-prueba/master/assets/Screenshot%20from%202019-02-06%2017-10-28_1549483858958.png" onclick="selectImage('2da imagen')"/>
       </div>
       <div class="imgblock">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Virus_en_1985.jpg"/>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Virus_en_1985.jpg" onclick="selectImage('3ra imagen')"/>
       </div>
   </div>
   <div class="row-flex">
       <div class="imgblock">
-        <input class="form-control mu-free-form-input" type="radio" name="malware_image" value="1ra imagen" />
+        <input class="form-control mu-free-form-input" type="radio" name="malware_image" id="malware_image" value="1ra imagen" onclick="selectImage('1ra imagen')"/>
           <label for="1ra imagen"></label>
       </div>
       <div class="imgblock">
-        <input class="form-control mu-free-form-input" type="radio" name="malware_image" value="2da imagen" />
+        <input class="form-control mu-free-form-input" type="radio" name="malware_image" id="malware_image" value="2da imagen" onclick="selectImage('2da imagen')"/>
           <label for="2da imagen"></label>
       </div>
       <div class="imgblock">
-        <input class="form-control mu-free-form-input" type="radio" name="malware_image" value="3ra imagen" />
+        <input class="form-control mu-free-form-input" type="radio" name="malware_image" id="malware_image" value="3ra imagen" onclick="selectImage('3ra imagen')"/>
           <label for="3ra imagen"></label>
       </div>
   </div>
 </div>
 
+<script>
+  function selectImage(image) {
+    $("#malware_image").val(image);
+    $('#malware_image.mu-free-form-input').change();
+  }
+</script>
 
 <style>
   .row-flex {
