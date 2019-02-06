@@ -10,6 +10,14 @@
   </div>
 </div>
 
+<div id="emotion">
+    <input type="radio" name="malware_image" id="1ra imagen" />
+        <label for="1ra imagen"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/Cellular-virus-wallpaper.jpg" alt="I'm sad" /></label>
+
+    <input type="radio" name="malware_image" id="2da imagen" />
+        <label for="2da imagen"><img src="https://raw.githubusercontent.com/MumukiProject/mumuki-guia-java-prueba/master/assets/Screenshot%20from%202019-02-06%2017-10-28_1549483858958.png" alt="I'm happy" /></label>
+</div>
+
 <div class="form-horizontal">
   <div class="form-group">
     <div class="input-group">
@@ -29,6 +37,7 @@
   let start;
   
   function selectImage(image) {
+    $("#malware_image").addClass("selected_image");
     $("#malware_image").val(image);
     $('#malware_image.mu-free-form-input').change();
   }
