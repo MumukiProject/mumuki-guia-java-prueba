@@ -27,7 +27,8 @@
   function selectImage(image) {
     console.log(image);
     $(`#radio_${image}`).prop("checked", true);
-
+    
+    $('#malware_image').val(image);
     $('#malware_image.mu-free-form-input').change();
   }
   
