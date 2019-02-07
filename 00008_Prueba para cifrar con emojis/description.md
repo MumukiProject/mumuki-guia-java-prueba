@@ -39,7 +39,7 @@
     const textBefore = value.substring(0,  emojiCursorStart);
     const textAfter  = value.substring(emojiCursorEnd, value.length);
     emojisInput.val(textBefore + emoji + textAfter);
-    start = emojiCursorStart + emoji.length;
+    let start = emojiCursorStart + emoji.length;
   }
 </script>
 
