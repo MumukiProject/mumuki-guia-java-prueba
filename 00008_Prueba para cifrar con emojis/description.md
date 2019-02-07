@@ -30,8 +30,6 @@
 
 
 <script>
-  let start;
-  
   function writeEmoji(emoji) {
     const emojisInput = $('#solution_content');
     console.log(emoji);
