@@ -29,7 +29,7 @@
     $(`#radio_${image}`).prop("checked", true);
     
     $('.mu-free-form-input').change(function(){
-      	$('#solution_content').attr('value', {'malware_image': image});
+      	$('#solution_content').attr('value', JSON.stringify({'malware_image': image}));
     });
 
 
