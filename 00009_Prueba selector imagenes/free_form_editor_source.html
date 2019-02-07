@@ -26,18 +26,12 @@
 <script>
   function selectImage(image) {
     console.log(image);
-    if(image == 1) {
-      $("#radio_1").prop("checked", true);
-    }
-    else if(image == 2) {
-      $("#radio_2").prop("checked", true);
-    } else {
-      $("#radio_3").prop("checked", true);
-    }
-    
+    $(`#radio_${image}`).prop("checked", true);
+
     $("#malware_image").val(image);
     $('#malware_image.mu-free-form-input').change();
   }
+  
 </script>
 
 <style>
