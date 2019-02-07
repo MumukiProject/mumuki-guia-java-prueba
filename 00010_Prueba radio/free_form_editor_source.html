@@ -42,7 +42,7 @@
     let previousValue = $('#solution_content').val();
     console.log(previousValue);
     if(previousValue) {
-      let currentIndex = JSON.parse(previousValue)
+      let currentIndex = JSON.parse(previousValue).malware_image;
       selectImage(Number.parseInt(currentIndex))
     }
   }
