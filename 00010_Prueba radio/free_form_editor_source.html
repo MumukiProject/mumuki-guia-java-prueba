@@ -29,9 +29,8 @@
     $(`#radio_${image}`).prop("checked", true);
     $('#solution_content').attr('value', JSON.stringify({'malware_image': String(image)}));
 
-    $('.mu-free-form-input').change(function(){
-      	$('#solution_content').attr('value', JSON.stringify({'malware_image': String(image)}));
-    });
+    $('.mu-free-form-input').change(function(e){
+e.stopPropagation()    });
 
 
   }
