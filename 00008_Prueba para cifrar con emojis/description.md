@@ -31,15 +31,9 @@
 
 <script>
   function writeEmoji(emoji) {
-    const emojisInput = $('#solution_content');
-    console.log(emoji);
-    const emojiCursorStart = emojisInput.prop('selectionStart');
-    const emojiCursorEnd = emojisInput.prop('selectionEnd');
-    const value = emojisInput.val() || '';
-    const textBefore = value.substring(0,  emojiCursorStart);
-    const textAfter  = value.substring(emojiCursorEnd, value.length);
-    emojisInput.val(textBefore + emoji + textAfter);
-    let start = emojiCursorStart + emoji.length;
+    var doc = mumuki.page.editors[0].getDoc();
+    var cursor = doc.getCursor();
+    doc.replaceRange(emoji, cursor);
   }
 </script>
 
