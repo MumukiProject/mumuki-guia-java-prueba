@@ -34,6 +34,7 @@
   
   function writeEmoji(emoji) {
     const emojisInput = $('#solution_content');
+    console.log(emoji);
     const emojiCursorStart = emojisInput.prop('selectionStart');
     const emojiCursorEnd = emojisInput.prop('selectionEnd');
     const value = emojisInput.val() || '';
