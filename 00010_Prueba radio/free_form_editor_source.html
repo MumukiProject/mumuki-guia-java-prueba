@@ -36,9 +36,17 @@
     $(`#radio_${imageIndex}`).prop("checked", true);
     setSolutionValue(imageIndex);
     $('.mu-free-form-input').change(() => setSolutionValue(imageIndex));
-
-
   }
+  
+  function loadSolution() {
+    let previousValue = $('#solution_content').val();
+    if(previousValue) {
+      let currentIndex = JSON.parse(previousValue)
+      selectImage(Number.parseInt(currentIndex))
+    }
+  }
+  
+  loadSolution();
 </script>
 
 <style>
