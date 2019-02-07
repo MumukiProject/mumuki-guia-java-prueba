@@ -30,7 +30,8 @@
     $('#solution_content').attr('value', JSON.stringify({'malware_image': String(image)}));
 
     $('.mu-free-form-input').change(function(e){
-e.stopPropagation()    });
+      	$('#solution_content').attr('value', JSON.stringify({'malware_image': String(image)}));
+    });
 
 
   }
