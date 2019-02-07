@@ -1,0 +1,67 @@
+<div class="container">
+  <div class="row-flex">
+      <div class="imgblock">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/Cellular-virus-wallpaper.jpg" onclick="selectImage(1)"/>
+      </div>
+      <div class="imgblock">
+        <img src="https://raw.githubusercontent.com/MumukiProject/mumuki-guia-java-prueba/master/assets/Screenshot%20from%202019-02-06%2017-10-28_1549483858958.png" onclick="selectImage(2)"/>
+      </div>
+      <div class="imgblock">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Virus_en_1985.jpg" onclick="selectImage(3)"/>
+      </div>
+  </div>
+  <div class="row-flex">
+      <div class="imgblock">
+        <input class="form-control mu-free-form-input" type="radio" name="malware_image" id="radio_1" value="1" onclick="selectImage(1)"/>
+      </div>
+      <div class="imgblock">
+        <input class="form-control mu-free-form-input" type="radio" name="malware_image" id="radio_2" value="2" onclick="selectImage(2)"/>
+      </div>
+      <div class="imgblock">
+        <input class="form-control mu-free-form-input" type="radio" name="malware_image" id="radio_3" value="3" onclick="selectImage(3)"/>
+      </div>
+  </div>
+</div>
+
+<script>
+  function selectImage(image) {
+    console.log(image);
+    $(`#radio_${image}`).prop("checked", true);
+    
+    //$('#malware_image').val(image);
+    $('mu-free-form-input').change();
+  }
+  
+</script>
+
+<style>
+  .row-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .container {
+    display: block;
+    width: 100%;
+  }
+  .imgblock {
+    flex: 1;
+    float: left;
+    margin: 8px;
+    box-sizing: border-box;
+    vertical-align: middle;
+  }
+  .imgblock img {
+      margin: 5px;
+      width: 100%; 
+      height: auto;
+      vertical-align: middle;
+      cursor: pointer;
+  }
+  input[type="radio"]{
+    margin: 4px 0 0;
+    line-height: normal;
+    border: 0px;
+    width: 100%;
+    height: 1em;
+</style>
