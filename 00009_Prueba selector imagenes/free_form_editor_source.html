@@ -1,24 +1,24 @@
 <div class="container">
   <div class="row-flex">
       <div class="imgblock">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/Cellular-virus-wallpaper.jpg" onclick="selectImage('1ra imagen')"/>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/Cellular-virus-wallpaper.jpg" onclick="selectImage(1)"/>
       </div>
       <div class="imgblock">
-        <img src="https://raw.githubusercontent.com/MumukiProject/mumuki-guia-java-prueba/master/assets/Screenshot%20from%202019-02-06%2017-10-28_1549483858958.png" onclick="selectImage('2da imagen')"/>
+        <img src="https://raw.githubusercontent.com/MumukiProject/mumuki-guia-java-prueba/master/assets/Screenshot%20from%202019-02-06%2017-10-28_1549483858958.png" onclick="selectImage(2)"/>
       </div>
       <div class="imgblock">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Virus_en_1985.jpg" onclick="selectImage('3ra imagen')"/>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Virus_en_1985.jpg" onclick="selectImage(3)"/>
       </div>
   </div>
   <div class="row-flex">
       <div class="imgblock">
-        <input class="form-control mu-free-form-input" type="radio" name="malware_image" value="1ra imagen" onclick="selectImage('1ra imagen')"/>
+        <input class="form-control mu-free-form-input" type="radio" name="malware_image" id="radio_1" value="1" onclick="selectImage(1)"/>
       </div>
       <div class="imgblock">
-        <input class="form-control mu-free-form-input" type="radio" name="malware_image" value="2da imagen" onclick="selectImage('2da imagen')"/>
+        <input class="form-control mu-free-form-input" type="radio" name="malware_image" id="radio_2" value="2" onclick="selectImage(2)"/>
       </div>
       <div class="imgblock">
-        <input class="form-control mu-free-form-input" type="radio" name="malware_image" value="3ra imagen" onclick="selectImage('3ra imagen')"/>
+        <input class="form-control mu-free-form-input" type="radio" name="malware_image" id="radio_3" value="3" onclick="selectImage(3)"/>
       </div>
   </div>
 </div>
@@ -26,6 +26,15 @@
 <script>
   function selectImage(image) {
     console.log(image);
+    if(image == 1) {
+      $("#radio_1").prop("checked", true);
+    }
+    else if(image == 2) {
+      $("#radio_2").prop("checked", true);
+    } else {
+      $("#radio_3").prop("checked", true);
+    }
+    
     $("#malware_image").val(image);
     $('#malware_image.mu-free-form-input').change();
   }
