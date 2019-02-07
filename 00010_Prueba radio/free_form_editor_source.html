@@ -24,14 +24,15 @@
 </div>
 
 <script>
-  function selectImage(image) {
-    console.log(image);
-    $(`#radio_${image}`).prop("checked", true);
-    $('#solution_content').attr('value', JSON.stringify({'malware_image': String(image)}));
-
-    $('.mu-free-form-input').change(function(e){
-      	$('#solution_content').attr('value', JSON.stringify({'malware_image': String(image)}));
-    });
+  function setSolutionValue(imageIndex) {
+    let value = {'malware_image': imageIndex.toString()}
+    $('#solution_content').attr('value', JSON.stringify(value));
+  }
+  
+  function selectImage(imageIndex) {
+    $(`#radio_${imageIndex}`).prop("checked", true);
+    setSolutionValue(imageIndex);
+    $('.mu-free-form-input').change(() => setSolutionValue(imageIndex));
 
 
   }
